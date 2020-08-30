@@ -20,9 +20,12 @@ void printBytes(struct point_t* var) {
 
 int main() {
     point_t myPoint = {5, 10};
+
+    // no difference in meaning between these two pointer declarations
     point_t *ptrPoint = &myPoint;
 
-    point_t *ptrSecondPoint = &(point_t) { 12, 24};
+    point_t* ptrSecondPoint = &(point_t) { 12, 24};
+
 
     printf("Point One: X: %d Y: %d\n", myPoint.x, myPoint.y);
     ptrPoint->x = 6;
